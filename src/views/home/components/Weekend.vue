@@ -2,7 +2,7 @@
     <div >
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
              <div class="item-img-wrapper">
                 <img  class="item-img" :src="item.imgUrl" >
              </div>
@@ -20,30 +20,10 @@
 <script>
 export default {
     name:'HomeWeekend',
-    data(){
-        return{
-            recommendList: [
-                {
-                    id:'0001',
-                    imgUrl:'http://img1.qunarzz.com/sight/source/1505/e2/2a63e38b84bc8e.jpg_r_640x214_679f0d37.jpg',
-                    title:'世界园艺博览会',
-                    desc:'一座会“呼吸”、有“生命”的绿色建筑。'
-                },
-                 {
-                    id:'0002',
-                    imgUrl:'http://img1.qunarzz.com/sight/source/1505/e2/2a63e38b84bc8e.jpg_r_640x214_679f0d37.jpg',
-                    title:'野生动物园',
-                    desc:'敢与森林之王近距离接触吗？'
-                },
-                 {
-                    id:'0003',
-                    imgUrl:'http://img1.qunarzz.com/sight/source/1505/e2/2a63e38b84bc8e.jpg_r_640x214_679f0d37.jpg',
-                    title:'海洋馆',
-                    desc:'真正的海洋世界'
-                },
-            ]
-        }
+    props:{
+        list: Array
     }
+   
 }
 </script>
 
@@ -57,7 +37,7 @@ export default {
     .item-img-wrapper
         overflow:hidden
         height:0
-        padding-bottom: 33.9%
+        padding-bottom: 37.09%
 
         .item-img
             width:100%

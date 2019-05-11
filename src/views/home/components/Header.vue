@@ -7,7 +7,7 @@
          <span class="iconfont">&#xe632;</span>
          输入城市景点游玩主题
          </div>
-     <div class="header-right">城市
+     <div class="header-right">{{this.city}}
          <span class="iconfont arrow-icon">&#xe615;</span>
      </div>
 
@@ -21,12 +21,16 @@
 
 export default {
   name: 'HomeHeader',
-
+  props:{
+      city: String,
+  },
 }
 </script>
 
 <style lang="stylus" scoped>  
 @import '~@/assets/style/varibles.styl'
+
+
 .header
     display:flex
     line-height:.86rem

@@ -2,7 +2,7 @@
     <div >
     <div class="recommend-title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <img  class="item-img" :src="item.imgUrl" >
 
             <div class="item-info">
@@ -19,30 +19,10 @@
 <script>
 export default {
     name:'HomeRecommend',
-    data(){
-        return{
-            recommendList: [
-                {
-                    id:'0001',
-                    imgUrl:'http://img1.qunarzz.com/sight/p0/1902/84/84696f368bbec10da3.img.jpg_200x200_50323152.jpg',
-                    title:'世界园艺博览会',
-                    desc:'一座会“呼吸”、有“生命”的绿色建筑。'
-                },
-                 {
-                    id:'0002',
-                    imgUrl:'http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg',
-                    title:'野生动物园',
-                    desc:'敢与森林之王近距离接触吗？'
-                },
-                 {
-                    id:'0003',
-                    imgUrl:'http://img1.qunarzz.com/sight/p0/1602/68/68aa05adb5315f9990.water.jpg_200x200_ce3d2658.jpg',
-                    title:'海洋馆',
-                    desc:'真正的海洋世界'
-                },
-            ]
-        }
-    }
+    props:{
+        list: Array
+    },
+  
 }
 </script>
 
