@@ -9,7 +9,7 @@
     </div>
 
     <router-link to='/city'>
-     <div class="header-right">{{this.city}}
+     <div class="header-right">{{doubleCity}}
          <span class="iconfont arrow-icon">&#xe615;</span>
      </div>
     </router-link>
@@ -21,12 +21,14 @@
 <script>
 // @ is an alias to /src
 //import HelloWorld from '@/components/HelloWorld.vue'
-
+import {mapState, mapGetters} from 'vuex'
 export default {
   name: 'HomeHeader',
-  props:{
-      city: String,
-  },
+  computed:{
+      //映射
+      ...mapState(['city']),
+      ...mapGetters(['doubleCity'])
+  }
 }
 </script>
 
@@ -56,7 +58,8 @@ export default {
         border-radius :5px 
         color:#ccc
     .header-right
-        width:1.24rem
+        min-width:1.04rem
+        padding: 0 .1rem 
         float:right
         text-align:center
         color:#fff

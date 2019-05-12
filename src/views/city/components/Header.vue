@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-    name:'City'
+    name:'CityHeader'
 }
 </script>
 <style lang="stylus" scoped >
@@ -17,8 +17,8 @@ export default {
 .header
     position:relative 
     overflow:hidden  
-    height: .86rem
-    line-height : .86rem
+    height: $headerHeight
+    line-height : $headerHeight
     text-align: center
     color: #fff 
     background: $bgColor
