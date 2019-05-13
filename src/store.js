@@ -32,9 +32,11 @@ export default new Vuex.Store({
 
 
   // }
+  //类似组件的计算属性
   getters:{
     doubleCity (state) {
       return state.city + ' ' + state.city
     }
   }
+  
 })
