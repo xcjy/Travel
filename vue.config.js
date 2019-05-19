@@ -1,6 +1,5 @@
-module.exports= {
-    baseUrl: './',
-    devServer: {
-        proxy: 'http://localhost:8080/'
-    }
-}
+module.exports = {
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/Travel/'
+      : '/'
+  }
